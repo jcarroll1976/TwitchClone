@@ -122,7 +122,7 @@ export default function Navbar() {
             <Menu as='div' className='relative text-left'>
             <div className='flex'>
               <Menu.Button>
-                <BsThreeDotsVertical size={20} />
+                <Image src={session.user?.image!} alt="/" width='45' height='45' />
               </Menu.Button>
             </div>
 
@@ -170,7 +170,7 @@ export default function Navbar() {
                   <Menu.Item>
                     {({ active }) => (
                       <a
-                        href='#'
+                      onClick={() => signOut()}
                         className={classNames(
                           active
                             ? 'bg-gray-500 text-gray-100'
